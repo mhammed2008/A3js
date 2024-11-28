@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site BookMark</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg mb-5">
+
+    <div class="container">
+        <header class="my-5 text-center mb-2 border-dote">
+            <h1 class="mx-auto mb-5 page-title position-relative">Bookmark</h1>
+        </header>
+        <!-- show table to user -->
+        <div class="mt-4">
+            <div class="sub-title my-5">
+                <h2 class="mx-auto mb-5 fs-3">
+                    <i class="fa-solid fa-bookmark me-2"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark ms-2"></i>
+                </h2>
+            </div>
+
+            <div class=" my-5 border-dote pb-4">
+                <div class="mt-3  w-100 ">
+                    <div class="form-floating  w-100">
+                        <input type="text" class="form-control" id="siteName" placeholder="Site Name">
+                        <label for="siteName">Site Name</label>
+                        <div id="validationNameFeedback" class="d-none invalid-feedback"></div>
+                    </div>
+                    <div class="form-floating mt-3 w-100">
+                        <input type="text" class="form-control " id="siteUrl" placeholder="Site URL">
+                        <label for="siteUrl">Site URL</label>
+                        <div id="validationUrlFeedback" class="d-none invalid-feedback"></div>
+                    </div>
+                    <button type="button" class="btn btn-danger px-5 fs-6 mt-3 mx-auto text-center d-block" id="submit">Submit</button>
+                    <button type="button" class="btn btn-primary px-5 fs-6 mt-3 mx-auto text-center d-none" id="update">save</button>
+                </div>
+            </div>
+
+            <table class="w-100 bg-white mt-3 rounded-2 text-center">
+                <thead class="bg-white border-bottom ">
+                    <tr>
+                        <th class="p-3 rounded-2 ">Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                        <th class=" rounded-2">Edite</th>
+                    </tr>
+
+                </thead>
+                <tbody id="htmlSitesList">
+                    <div>
+                        <tr>
+                            <td>
+                                <h3>No BookMark found</h3>
+                                <button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">Create new
+                                    Bookmark</button>
+                            </td>
+                        </tr>
+
+                    </div>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/mine.js"></script>
+</body>
+
+</html>
